@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Risk Battle Simulator</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Photon CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/photonkit@0.1.2/dist/css/photon.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="window">
+    <header class="toolbar toolbar-header">
+        <h1 class="title">Risk&nbsp;Battle&nbsp;Simulator</h1>
+    </header>
+
+    <div class="window-content">
+        <div class="pane padded">
+
+            <form id="battle-form">
+                <!-- Attacker input -->
+                <div class="form-group">
+                    <label>Attacking Armies
+                        <input id="attackerNumber" type="number" min="1" value="3" class="form-control number-input">
+                    </label>
+                    <input id="attackerSlider" type="range" min="1" max="30" value="3">
+                </div>
+
+                <!-- Defender input -->
+                <div class="form-group">
+                    <label>Defending Armies
+                        <input id="defenderNumber" type="number" min="1" value="2" class="form-control number-input">
+                    </label>
+                    <input id="defenderSlider" type="range" min="1" max="30" value="2">
+                </div>
+
+                <!-- Big calculate button -->
+                <button id="calculateBtn" type="button" class="btn btn-large btn-primary btn-cta">
+                    🎲&nbsp;Calculate
+                </button>
+
+                <!-- Graph canvas -->
+                <section class="graph-wrapper">
+                    <canvas id="lossChart" height="220"></canvas>
+                </section>
+
+                <!-- Numerical results -->
+                <section id="results" class="results hidden">
+                    <!-- Filled dynamically -->
+                </section>
+
+                <!-- Sim count -->
+                <div class="form-group small-input">
+                    <label>Simulations
+                        <input id="simulations" type="number" min="100" step="100" value="10000" class="form-control">
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="toolbar toolbar-footer center">
+        <h5>Made with Photon Kit • Dark Mode Ready</h5>
+    </footer>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

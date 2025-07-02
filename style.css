@@ -1,0 +1,69 @@
+:root {
+    --bg: #1d1f21;
+    --fg: #e0e0e0;
+    --primary: #ff5252;
+    --accent: #448aff;
+    --card-bg: #2b2d30;
+    --border: #3a3d41;
+}
+
+html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.window { background: var(--bg); }
+
+.toolbar-header, .toolbar-footer {
+    background: var(--card-bg);
+    color: var(--fg);
+    border-bottom: 1px solid var(--border);
+}
+
+.btn-primary { background: var(--primary); border: none; }
+
+.btn-cta { width: 100%; margin: 1rem 0; font-size: 1.25rem; }
+
+.form-group { margin-bottom: 1rem; display: flex; flex-direction: column; }
+
+.form-group label { margin-bottom: .25rem; font-weight: 600; }
+
+.number-input { width: 90px; display: inline-block; margin-left: .4rem; }
+
+input[type="range"] { width: 100%; margin-top: .5rem; }
+
+.small-input { max-width: 240px; }
+
+.graph-wrapper {
+    margin: 1.5rem 0;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+#lossChart {
+    width: 100%;
+}
+
+.results {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+.results.hidden { display: none; }
+
+.results h3 { margin-top: 0; color: var(--accent); }
+
+.results p { margin: .25rem 0; }
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: #fafafa; --fg: #111; --card-bg: #fff; --border: #dcdcdc;
+    }
+}
